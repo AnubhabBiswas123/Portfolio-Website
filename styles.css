@@ -320,6 +320,7 @@ a{
   background-size: cover; /*taki pure container ko cover kar jaye*/
   position: relative; /*because baadme humlogo ko overlap karwana hai absolute use karke*/
   box-shadow: 0px 0px 40px #1f1f1f;
+  overflow: hidden; /* This prevents icons from going outside the card */
 }
 .project-card::after /*black tint k liye use kiya hai*/
 {
@@ -692,6 +693,20 @@ footer
     width: 90%;
   }
 
+  /* Fixed faded text "Anubhab Biswas" above projects */
+  .faded-text {
+    font-size: 3rem; /* Reduced from 7em */
+    bottom: -8%;
+    left: 10%;
+    text-align: center;
+    width: 80%;
+  }
+
+  .page-header {
+    font-size: 60px; /* Reduced from 90px */
+    padding: 2rem 1rem;
+  }
+
   .project-container {
     gap: 60px;
     padding: 2rem 1rem;
@@ -701,6 +716,7 @@ footer
     height: 400px;
     margin-left: 0 !important;
     width: 100%;
+    overflow: hidden; /* Ensures icons stay within bounds */
   }
 
   .project-content {
@@ -715,6 +731,21 @@ footer
   .project-subheading {
     font-size: 14px;
     width: 90%;
+  }
+
+  /* Fixed project number positioning for mobile */
+  .project-number {
+    font-size: 120px; /* Reduced from 200px */
+  }
+
+  .project-number-left {
+    right: -20px; /* Adjusted from -40px */
+    top: -25px; /* Adjusted from -45px */
+  }
+
+  .project-number-right {
+    left: -20px; /* Adjusted from -40px */
+    top: -25px; /* Adjusted from -45px */
   }
 
   .skills-container {
@@ -771,8 +802,35 @@ footer
     line-height: 1.2;
   }
 
+  /* Further adjustments for very small screens */
+  .faded-text {
+    font-size: 2rem; /* Even smaller for mobile */
+    bottom: -5%;
+    left: 5%;
+    width: 90%;
+  }
+
+  .page-header {
+    font-size: 40px; /* Further reduced */
+    padding: 1rem;
+  }
+
   .project-number {
-    font-size: 100px;
+    font-size: 80px; /* Further reduced */
+  }
+
+  .project-number-left {
+    right: -10px; /* Further adjusted */
+    top: -15px;
+  }
+
+  .project-number-right {
+    left: -10px; /* Further adjusted */
+    top: -15px;
+  }
+
+  .project-card {
+    height: 350px; /* Slightly smaller for mobile */
   }
 
   .skill-heading {
